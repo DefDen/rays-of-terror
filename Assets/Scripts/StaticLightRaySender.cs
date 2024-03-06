@@ -3,24 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class LightRaySender : MonoBehaviour { 
+public class StaticLightRaySender : MonoBehaviour { 
 
     // variables for light detection
-    private int rays = 10; // Number of rays for the vertical angle
-    private int slices = 10; // Number of rays for the horizontal angle
+    public int rays = 10; // Number of rays for the vertical angle
+    public int slices = 10; // Number of rays for the horizontal angle
     private float coneAngle; // angle of the cone
     public float coneAngleOffset = 5; // offset because spot light is wider than angle says
     public float maxRayDistance = 50f; // Maximum distance to visualize the rays
     public string targetTag = "Monster";
 
 
-    // battery for flashlight
-
-    public TextMeshProUGUI batteryText;
-    private float maxBattery = 100f;
+    // battery for static light
+    float maxBattery = 100f;
     public float batteryDrainRate = 10f; // per second
 
-    private bool lightOn = false;
+    private bool lightOn = true;
     private float currentBattery;
 
     Light myLight;
@@ -30,8 +28,7 @@ public class LightRaySender : MonoBehaviour {
     {
         currentBattery = maxBattery;
         myLight = GetComponent<Light>();
-        myLight.enabled = false;
-        batteryText.text = "Battery: " + currentBattery.ToString() + "%";
+        myLight.enabled = true;
 
         coneAngle = myLight.spotAngle + coneAngleOffset;
     }
@@ -46,15 +43,6 @@ public class LightRaySender : MonoBehaviour {
             currentBattery = 0;
         // if battery not dead, check if player is toggling flashlight
         } 
-        if (Input.GetMouseButtonDown(0))
-        {
-            // click sound/animation even if dead?
-
-            if (currentBattery > 0) {
-                lightOn = !lightOn;
-                myLight.enabled = !myLight.enabled;
-            }
-        }
 
         // if flashlight is on, send out the light detection rays
         if (lightOn) {
@@ -65,8 +53,6 @@ public class LightRaySender : MonoBehaviour {
         }
 
         currentBattery = Mathf.Clamp(currentBattery, 0, maxBattery);
-
-        batteryText.text = "Battery: " + Mathf.Round(currentBattery) + "%";
     }
 
     void sendDetectorRays() {
