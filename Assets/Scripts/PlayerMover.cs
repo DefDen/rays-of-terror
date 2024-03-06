@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMover : MonoBehaviour
+{
     public float speed = 2.0f;
     private Rigidbody rb;
 
