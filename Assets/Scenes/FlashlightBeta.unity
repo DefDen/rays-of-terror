@@ -1221,8 +1221,8 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 10
   m_Range: 10
-  m_SpotAngle: 107.5527
-  m_InnerSpotAngle: 28
+  m_SpotAngle: 88.8712
+  m_InnerSpotAngle: 38.662754
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -1281,7 +1281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165ee583ea3d1481f9fd0dd713a9c734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coneAngleOffset: 5
+  coneAngleOffset: 0
   maxRayDistance: 50
   targetTag: Monster
   batteryText: {fileID: 1561478097}
