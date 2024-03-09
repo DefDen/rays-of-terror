@@ -100,7 +100,7 @@ public class LightRaySender : MonoBehaviour {
                     if (hit.collider.CompareTag(targetTag))
                     {
                         // Check if the object has a script with a method named isHit and call it
-                        EnemyController targetScript = hit.collider.GetComponent<EnemyController>();
+                        EnemyController targetScript = hit.collider.GetComponentInParent<EnemyController>();
                         if (targetScript != null)
                         {
                             targetScript.GotHit();
