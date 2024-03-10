@@ -31,7 +31,7 @@ public class LightRaySender : MonoBehaviour {
         currentBattery = maxBattery;
         myLight = GetComponent<Light>();
         myLight.enabled = false;
-        batteryText.text = "Battery: " + currentBattery.ToString() + "%";
+       batteryText.text = "Battery: " + currentBattery.ToString() + "%";
 
         coneAngle = myLight.spotAngle + coneAngleOffset;
         maxRayDistance = myLight.range;
