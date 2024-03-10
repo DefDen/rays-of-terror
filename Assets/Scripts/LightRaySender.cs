@@ -10,7 +10,7 @@ public class LightRaySender : MonoBehaviour {
     private int slices = 10; // Number of rays for the horizontal angle
     private float coneAngle; // angle of the cone
     public float coneAngleOffset = 5; // offset because spot light is wider than angle says
-    public float maxRayDistance = 50f; // Maximum distance to visualize the rays
+    private float maxRayDistance; // Maximum distance to visualize the rays
     public string targetTag = "Monster";
 
 
@@ -34,6 +34,7 @@ public class LightRaySender : MonoBehaviour {
         batteryText.text = "Battery: " + currentBattery.ToString() + "%";
 
         coneAngle = myLight.spotAngle + coneAngleOffset;
+        maxRayDistance = myLight.range;
     }
     
 
