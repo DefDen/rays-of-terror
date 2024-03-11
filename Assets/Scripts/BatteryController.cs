@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class BatteryController : MonoBehaviour
 {
-
     void Update() 
     {
          transform.Rotate (new Vector3 (15, 30, 45) * Time.deltaTime);
     }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -19,7 +19,6 @@ public class BatteryController : MonoBehaviour
             // Check if the object is found
             if (flashlight != null)
             {
-                Debug.Log("not null");
                 LightRaySender otherScript = flashlight.GetComponent<LightRaySender>();
 
                 if (otherScript != null)

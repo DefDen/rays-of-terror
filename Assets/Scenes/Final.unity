@@ -407,6 +407,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7180498}
   m_Mesh: {fileID: 4300000, guid: de815e9dc2d95a948939d83cfaa32a3d, type: 3}
+--- !u!1 &9350321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9350322}
+  m_Layer: 0
+  m_Name: Batteries
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9350322
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9350321}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.645214, y: 23.131165, z: 57.08734}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1464852176}
+  - {fileID: 451441311}
+  - {fileID: 127510392}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &10375401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,12 +2022,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89046780}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.9, y: 27.52, z: 45}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -28.745214, y: 4.388836, z: -12.087341}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2046644056}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &94812660
 GameObject:
@@ -2903,7 +2937,7 @@ GameObject:
   - component: {fileID: 127510389}
   - component: {fileID: 127510388}
   m_Layer: 0
-  m_Name: Battery (2)
+  m_Name: Battery 3
   m_TagString: Battery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3002,13 +3036,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127510387}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 160.43, y: 3.87, z: 99.21}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 130.78477, y: -19.261166, z: 42.122658}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1189215858}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 9350322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &130181658
 GameObject:
@@ -5928,12 +5962,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246235707}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.9, y: 27.52, z: 120}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -28.745214, y: 4.388836, z: 62.91266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2046644056}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &249406090
 GameObject:
@@ -6469,12 +6503,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265447528}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.9, y: 27.52, z: 90}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -28.745214, y: 4.388836, z: 32.91266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2046644056}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &272991795
 GameObject:
@@ -7151,7 +7185,7 @@ GameObject:
   - component: {fileID: 317068052}
   - component: {fileID: 317068051}
   m_Layer: 5
-  m_Name: End text
+  m_Name: End Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7196,7 +7230,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: End Text.
+  m_text: End Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10736,7 +10770,7 @@ GameObject:
   - component: {fileID: 451441308}
   - component: {fileID: 451441307}
   m_Layer: 0
-  m_Name: Battery (1)
+  m_Name: Battery 2
   m_TagString: Battery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10835,13 +10869,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451441306}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.3, y: 3.87, z: 78.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 30.654785, y: -19.261166, z: 21.412659}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1022436612}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 9350322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &461348003
 GameObject:
@@ -15394,7 +15428,7 @@ GameObject:
   - component: {fileID: 679642346}
   - component: {fileID: 679642349}
   m_Layer: 0
-  m_Name: Zombie
+  m_Name: Zombie 1
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15414,8 +15448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2122121002}
   lookRotateSpeed: 100
-  _isHit: 0
-  _canHurtPlayer: 0
+  canHurtPlayer: 0
 --- !u!195 &679642347
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15446,13 +15479,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679642345}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.7, y: 5, z: 39}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.054787, y: -18.131165, z: -18.087341}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 487557546}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 945909167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &679642349
 CapsuleCollider:
@@ -15742,7 +15775,7 @@ GameObject:
   - component: {fileID: 685064655}
   - component: {fileID: 685064654}
   m_Layer: 0
-  m_Name: Zombie (2)
+  m_Name: Zombie 3
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15785,8 +15818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2122121002}
   lookRotateSpeed: 100
-  _isHit: 0
-  _canHurtPlayer: 0
+  canHurtPlayer: 0
 --- !u!195 &685064656
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15817,13 +15849,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685064653}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100.5, y: 5, z: 140.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 70.85478, y: -18.131165, z: 83.41266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2074490650}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 945909167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &690890270
 GameObject:
@@ -21757,6 +21789,41 @@ Transform:
   - {fileID: 1183491543}
   - {fileID: 1739439338}
   m_Father: {fileID: 608803227}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &945909166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 945909167}
+  m_Layer: 0
+  m_Name: Monsters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &945909167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945909166}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.645214, y: 23.131165, z: 57.08734}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 679642348}
+  - {fileID: 1390045645}
+  - {fileID: 685064657}
+  - {fileID: 1884558412}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &947383211
 GameObject:
@@ -32728,7 +32795,7 @@ GameObject:
   - component: {fileID: 1390045643}
   - component: {fileID: 1390045642}
   m_Layer: 0
-  m_Name: Zombie (1)
+  m_Name: Zombie 2
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32771,8 +32838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2122121002}
   lookRotateSpeed: 100
-  _isHit: 0
-  _canHurtPlayer: 0
+  canHurtPlayer: 0
 --- !u!195 &1390045644
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -32803,13 +32869,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390045641}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.8, y: 5, z: 83.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 30.154785, y: -18.131165, z: 26.412659}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1557174468}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 945909167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1390412954
 GameObject:
@@ -33257,12 +33323,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403573775}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.9, y: 27.52, z: 30}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -28.745214, y: 4.388836, z: -27.087341}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2046644056}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1410030485
 GameObject:
@@ -34823,7 +34889,7 @@ GameObject:
   - component: {fileID: 1464852173}
   - component: {fileID: 1464852172}
   m_Layer: 0
-  m_Name: Battery
+  m_Name: Battery 1
   m_TagString: Battery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34922,13 +34988,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464852171}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.34, y: 3.87, z: 160.43}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.694786, y: -19.261166, z: 103.34265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2045225665}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 9350322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1475083721
 GameObject:
@@ -36433,12 +36499,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512920679}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.9, y: 27.52, z: 135}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -28.745214, y: 4.388836, z: 77.91266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2046644056}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1515728991
 GameObject:
@@ -38004,12 +38070,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591589054}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.9, y: 27.52, z: 105}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -28.745214, y: 4.388836, z: 47.91266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2046644056}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1593549658
 GameObject:
@@ -42710,12 +42776,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782405592}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.9, y: 27.52, z: 75}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -28.745214, y: 4.388836, z: 17.912659}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2046644056}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1790147540
 GameObject:
@@ -43729,12 +43795,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845399393}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.9, y: 27.52, z: 60}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -28.745214, y: 4.388836, z: 2.9126587}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2046644056}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1847196352
 GameObject:
@@ -44988,7 +45054,7 @@ GameObject:
   - component: {fileID: 1884558410}
   - component: {fileID: 1884558409}
   m_Layer: 0
-  m_Name: Zombie (3)
+  m_Name: Zombie 4
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45031,8 +45097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2122121002}
   lookRotateSpeed: 100
-  _isHit: 0
-  _canHurtPlayer: 0
+  canHurtPlayer: 0
 --- !u!195 &1884558411
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -45063,13 +45128,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884558408}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 176.6, y: 5, z: 79.1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 146.95479, y: -18.131165, z: 22.012657}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 608803227}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 945909167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1886635766
 GameObject:
@@ -48186,6 +48251,45 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &2046644055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2046644056}
+  m_Layer: 0
+  m_Name: Spot Lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2046644056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046644055}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.645214, y: 23.131165, z: 57.08734}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1403573779}
+  - {fileID: 89046784}
+  - {fileID: 1845399397}
+  - {fileID: 1782405596}
+  - {fileID: 265447532}
+  - {fileID: 1591589058}
+  - {fileID: 246235711}
+  - {fileID: 1512920683}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2049391045
 GameObject:
   m_ObjectHideFlags: 0
@@ -49828,22 +49932,10 @@ SceneRoots:
   m_Roots:
   - {fileID: 249406095}
   - {fileID: 710227069}
-  - {fileID: 679642348}
-  - {fileID: 1390045645}
-  - {fileID: 685064657}
-  - {fileID: 1884558412}
-  - {fileID: 1403573779}
-  - {fileID: 89046784}
-  - {fileID: 1845399397}
-  - {fileID: 1782405596}
-  - {fileID: 265447532}
-  - {fileID: 1591589058}
-  - {fileID: 246235711}
-  - {fileID: 1512920683}
   - {fileID: 748410088}
   - {fileID: 368840582}
   - {fileID: 2122121006}
-  - {fileID: 1464852176}
-  - {fileID: 451441311}
-  - {fileID: 127510392}
   - {fileID: 1874535800}
+  - {fileID: 9350322}
+  - {fileID: 945909167}
+  - {fileID: 2046644056}

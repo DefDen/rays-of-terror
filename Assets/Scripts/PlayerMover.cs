@@ -16,25 +16,20 @@ public class PlayerMover : MonoBehaviour
     
     private Plane _plane = new Plane(Vector3.up, 0); // plane that the player points to
     private const float RotationSpeed = 5f;
-    private bool isDead;
 
     private void Start()
     {
         gameOverScreen.SetActive(false);
-        isDead = false;
     }
 
     void FixedUpdate()
     {
-        if(!isDead) {
-             float moveX = Input.GetAxis("Horizontal");
-            float moveZ = Input.GetAxis("Vertical");
+        float moveX = Input.GetAxis("Horizontal");
+        float moveZ = Input.GetAxis("Vertical");
 
-            Vector3 movement = new Vector3(moveX, 0.0f, moveZ);
+        Vector3 movement = new Vector3(moveX, 0.0f, moveZ);
 
-            transform.position += Time.deltaTime * movement * speed;
-        }
-       
+        transform.position += Time.deltaTime * movement * speed;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,17 +38,15 @@ public class PlayerMover : MonoBehaviour
         {
             EnemyController otherScript = other.GetComponent<EnemyController>();
 
-            if (otherScript != null && otherScript._canHurtPlayer)
+            if (otherScript != null && otherScript.canHurtPlayer)
             {
-                Debug.Log("I should be dead");
                 endText.text = "You've been infected";
-                isDead = true;
                 gameOverScreen.SetActive(true);
             }
-        } else if (other.gameObject.CompareTag("Finish")) {
-            Debug.Log("I should be winning");
+        }
+        else if (other.gameObject.CompareTag("Finish"))
+        {
             endText.text = "You escaped!";
-            isDead = true;
             gameOverScreen.SetActive(true);
         }
     }

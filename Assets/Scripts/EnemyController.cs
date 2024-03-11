@@ -4,22 +4,22 @@ using System;
 
 public class EnemyController : MonoBehaviour
 {
-    private NavMeshAgent agent;
     public Rigidbody player;
     public float lookRotateSpeed = 1000f;
+    public bool canHurtPlayer;
 
     private float _walkingInc = 0.5f;
     private float _walkingReset = 0;
-    private float _animationDegree = 40f;
-    public bool _isHit = false;
-
-    public bool _canHurtPlayer;
+    private const float AnimationDegree = 40f;
+    private NavMeshAgent _agent;
+    private bool _isHit;
     
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation = false;
-        _canHurtPlayer = true;
+        _agent = GetComponent<NavMeshAgent>();
+        _agent.updateRotation = false;
+        canHurtPlayer = true;
+        _isHit = false;
     }
 
     void FixedUpdate()
@@ -31,14 +31,14 @@ public class EnemyController : MonoBehaviour
     {
         if (_isHit)
         {
-            agent.enabled = false;
-            _canHurtPlayer = false;
+            _agent.enabled = false;
+            canHurtPlayer = false;
         }
         else
         {
-            _canHurtPlayer = true;
-            agent.enabled = true;
-            agent.SetDestination(player.position);
+            canHurtPlayer = true;
+            _agent.enabled = true;
+            _agent.SetDestination(player.position);
             WalkingAnimation();
         }
         _isHit = false;
@@ -51,9 +51,9 @@ public class EnemyController : MonoBehaviour
 
     void RotateTowardsWalking()
     {
-        if (agent.velocity != Vector3.zero)
+        if (_agent.velocity != Vector3.zero)
         {
-            Vector3 direction = (agent.steeringTarget - transform.position).normalized;
+            Vector3 direction = (_agent.steeringTarget - transform.position).normalized;
             Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation * Quaternion.Euler(0f, -90f, 0f), lookRotateSpeed * Time.fixedDeltaTime);
         }
@@ -61,7 +61,7 @@ public class EnemyController : MonoBehaviour
 
     void WalkingAnimation() {
 
-        if (Math.Abs(_walkingReset) > _animationDegree) {
+        if (Math.Abs(_walkingReset) > AnimationDegree) {
             _walkingInc = -_walkingInc;
         }
         transform.Find("BodyFrame").Find("Body").Rotate(-_walkingInc * Vector3.up / 10);
