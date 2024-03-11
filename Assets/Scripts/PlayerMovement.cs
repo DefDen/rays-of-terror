@@ -45,21 +45,29 @@ public class PlayerMovement : MonoBehaviour {
         // Left leg
         transform.Find("BodyFrame").Find("LeftLegFrame").Rotate(-walkingInc * Vector3.forward);
         if (-walkingInc > 0) {
-            if (-walkingReset > 0 && -walkingReset < 20) {
-                transform.Find("BodyFrame").Find("LeftLegFrame").Find("ShinFrame").Rotate(walkingInc * Vector3.forward);
+            Transform shin = transform.Find("BodyFrame").Find("LeftLegFrame").Find("ShinFrame");
+            if (-walkingReset < 10 && shin.localRotation.z > -0.25f) {
+                shin.Rotate(0.5f * walkingInc * Vector3.forward);
             }
-            if (-walkingReset > 20) {
-                transform.Find("BodyFrame").Find("LeftLegFrame").Find("ShinFrame").Rotate(-walkingInc * Vector3.forward);
+            if (-walkingReset > 10 && shin.localRotation.z < 0) {
+                shin.Rotate(-1 * walkingInc * Vector3.forward);
+            }
+            if (shin.localRotation.z > 0) {
+                shin.localRotation = Quaternion.Euler(0,0,0);
             }
         }
         // Right leg
         transform.Find("BodyFrame").Find("RightLegFrame").Rotate(walkingInc * Vector3.forward);
         if (walkingInc > 0) {
-            if (walkingReset > 0 && walkingReset < 20) {
-                transform.Find("BodyFrame").Find("RightLegFrame").Find("ShinFrame").Rotate(-walkingInc * Vector3.forward);
+            Transform shin = transform.Find("BodyFrame").Find("RightLegFrame").Find("ShinFrame");
+            if (walkingReset < 10 && shin.localRotation.z > -0.25f) {
+                shin.Rotate(-0.5f * walkingInc * Vector3.forward);
             }
-            if (walkingReset > 20) {
-                transform.Find("BodyFrame").Find("RightLegFrame").Find("ShinFrame").Rotate(walkingInc * Vector3.forward);
+            if (walkingReset > 10 && shin.localRotation.z < 0) {
+                shin.Rotate(1 * walkingInc * Vector3.forward);
+            }
+            if (shin.localRotation.z > 0) {
+                shin.localRotation = Quaternion.Euler(0,0,0);
             }
         }
 
