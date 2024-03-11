@@ -6,16 +6,16 @@ using TMPro;
 public class StaticLightRaySender : MonoBehaviour { 
 
     // variables for light detection
-    public int rays = 10; // Number of rays for the vertical angle
-    public int slices = 10; // Number of rays for the horizontal angle
+    public int rays = 15; // Number of rays for the vertical angle
+    public int slices = 15; // Number of rays for the horizontal angle
     private float coneAngle; // angle of the cone
-    public float coneAngleOffset = 0; // offset because spot light is wider than angle says
+    public float coneAngleOffset = -5; // offset because spot light is wider than angle says
     private float maxRayDistance; // Maximum distance to visualize the rays
     public string targetTag = "Monster";
 
 
     // battery for static light
-    float maxBattery = 100f;
+    public float maxBattery = 100f;
     public float batteryDrainRate = 10f; // per second
 
     private bool lightOn = true;

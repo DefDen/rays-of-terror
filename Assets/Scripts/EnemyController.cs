@@ -11,12 +11,15 @@ public class EnemyController : MonoBehaviour
     private float _walkingInc = 0.5f;
     private float _walkingReset = 0;
     private float _animationDegree = 40f;
-    private bool _isHit;
+    public bool _isHit = false;
+
+    public bool _canHurtPlayer;
     
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
+        _canHurtPlayer = true;
     }
 
     void FixedUpdate()
@@ -29,9 +32,11 @@ public class EnemyController : MonoBehaviour
         if (_isHit)
         {
             agent.enabled = false;
+            _canHurtPlayer = false;
         }
         else
         {
+            _canHurtPlayer = true;
             agent.enabled = true;
             agent.SetDestination(player.position);
             WalkingAnimation();

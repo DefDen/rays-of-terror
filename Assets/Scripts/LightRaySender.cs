@@ -21,7 +21,7 @@ public class LightRaySender : MonoBehaviour {
     public float batteryDrainRate = 10f; // per second
 
     private bool lightOn = false;
-    private float currentBattery;
+    public float currentBattery;
 
     Light myLight;
 

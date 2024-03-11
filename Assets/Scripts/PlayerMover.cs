@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMover : MonoBehaviour
 {
@@ -10,31 +11,49 @@ public class PlayerMover : MonoBehaviour
     public Vector3 worldPosition;
     public Camera mainCamera;
     public GameObject gameOverScreen;
+
+    public TextMeshProUGUI endText;
     
     private Plane _plane = new Plane(Vector3.up, 0); // plane that the player points to
     private const float RotationSpeed = 5f;
-    private bool _isDead;
+    private bool isDead;
 
     private void Start()
     {
         gameOverScreen.SetActive(false);
+        isDead = false;
     }
 
     void FixedUpdate()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
+        if(!isDead) {
+             float moveX = Input.GetAxis("Horizontal");
+            float moveZ = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveX, 0.0f, moveZ);
+            Vector3 movement = new Vector3(moveX, 0.0f, moveZ);
 
-        transform.position += Time.deltaTime * movement * speed;
+            transform.position += Time.deltaTime * movement * speed;
+        }
+       
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Monster"))
         {
-            Debug.Log("I should be dead");
+            EnemyController otherScript = other.GetComponent<EnemyController>();
+
+            if (otherScript != null && otherScript._canHurtPlayer)
+            {
+                Debug.Log("I should be dead");
+                endText.text = "You've been infected";
+                isDead = true;
+                gameOverScreen.SetActive(true);
+            }
+        } else if (other.gameObject.CompareTag("Finish")) {
+            Debug.Log("I should be winning");
+            endText.text = "You escaped!";
+            isDead = true;
             gameOverScreen.SetActive(true);
         }
     }
