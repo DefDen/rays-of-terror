@@ -49755,7 +49755,7 @@ MonoBehaviour:
   worldPosition: {x: 0, y: 0, z: 0}
   mainCamera: {fileID: 249406094}
   gameOverScreen: {fileID: 211295163}
-  endText: {fileID: 0}
+  endText: {fileID: 317068051}
 --- !u!23 &2122121004
 MeshRenderer:
   m_ObjectHideFlags: 0
