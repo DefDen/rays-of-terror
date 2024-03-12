@@ -11,6 +11,8 @@ public class PlayerMover : MonoBehaviour
     public Vector3 worldPosition;
     public Camera mainCamera;
 
+    private Rigidbody rb;
+
     public GameObject gameOverScreen;
 
     public bool isPerson = false;
@@ -26,6 +28,7 @@ public class PlayerMover : MonoBehaviour
     private void Start()
     {
         gameOverScreen.SetActive(false);
+        rb = GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
@@ -33,14 +36,15 @@ public class PlayerMover : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveX, 0.0f, moveZ);
+        Vector3 movement = new Vector3(moveX, 0, moveZ).normalized * speed;
 
         if (isPerson && movement.magnitude > 0.1f)
         {
             WalkingAnimation();
         }
 
-        transform.position += Time.deltaTime * movement * speed;
+        rb.velocity = movement;
+        //transform.position += Time.deltaTime * movement;
     }
 
     private void OnTriggerEnter(Collider other)
