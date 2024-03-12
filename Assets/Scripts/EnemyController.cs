@@ -4,7 +4,7 @@ using System;
 
 public class EnemyController : MonoBehaviour
 {
-    public Rigidbody player;
+    public GameObject player;
     public float lookRotateSpeed = 1000f;
     public bool canHurtPlayer;
 
@@ -38,7 +38,7 @@ public class EnemyController : MonoBehaviour
         {
             canHurtPlayer = true;
             _agent.enabled = true;
-            _agent.SetDestination(player.position);
+            _agent.SetDestination(player.transform.position);
             WalkingAnimation();
         }
         _isHit = false;

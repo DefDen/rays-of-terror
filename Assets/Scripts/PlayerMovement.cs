@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject Player;
 
     private int walkingInc = 2;
-    private int walkingReset;
+    private int walkingReset = 0;
 
     private void Start() { }
     
