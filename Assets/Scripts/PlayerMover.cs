@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 
@@ -50,12 +47,8 @@ public class PlayerMover : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Monster"))
-        {
-
-            Debug.Log("Monster!");
-            
+        {   
             EnemyController otherScript = other.GetComponent<EnemyController>();
-
             if (otherScript != null && otherScript.canHurtPlayer)
             {
                 endText.text = "You've been infected";
@@ -90,12 +83,11 @@ public class PlayerMover : MonoBehaviour
         }
     }
 
-    void WalkingAnimation() {
-
-       if (Math.Abs(walkingReset) >= 40) {
+    void WalkingAnimation() { 
+        if (Math.Abs(walkingReset) >= 40) {
             walkingInc = -walkingInc;
         }
-
+       
         // Head
         transform.Find("BodyFrame").Find("HeadFrame").Rotate(-walkingInc * Vector3.forward / 10);
 
@@ -110,7 +102,6 @@ public class PlayerMover : MonoBehaviour
         if (walkingReset == 0 && walkingInc > 0) {
             transform.Find("BodyFrame").Find("LeftArmFrame").Find("ForearmFrame").Rotate(walkingInc * Vector3.forward * lowerInc);
         }
-        
 
         // Body
         transform.Find("BodyFrame").Find("Body").Rotate(-walkingInc * Vector3.up / 10);
@@ -144,7 +135,6 @@ public class PlayerMover : MonoBehaviour
                 shin.localRotation = Quaternion.Euler(0,0,0);
             }
         }
-
         walkingReset += walkingInc;
     }
 }
